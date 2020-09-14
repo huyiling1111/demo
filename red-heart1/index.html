@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .heart {
+        /* border: 1px solid red; */
+        position: relative;
+        display: inline-block;
+        transition: all 1s;
+      }
+      /* 即使.heart里的子元素进行定位了，其实也还在.heart标签里。 */
+      .circle:first-child {
+        border: 1px solid red;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 200px;
+        top: 50px;
+        transform: rotate(45deg) translatey(35px);
+        border-radius: 50% 50% 0% 0%;
+        background: red;
+      }
+      .circle:nth-child(2) {
+        /* border: 1px solid red; */
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        transform: rotate(45deg) translatex(35px);
+        border-radius: 50% 0% 0% 50%;
+        background: red;
+      }
+      .square {
+        /*   border: 1px solid red; */
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 150px;
+        top: 100px;
+        transform: rotate(45deg);
+        background: red;
+      }
+      .heart:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="square"></div>
+    </div>
+  </body>
+</html>
