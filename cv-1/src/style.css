@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+}
+
+.div1 {
+  position: fixed;
+  top: 0px;
+  left: 70%;
+}
+.div1::before {
+  box-sizing: border-box;
+  content: "";
+  /* border: 1px solid red; */
+}
+.div1::after {
+  box-sizing: border-box;
+  content: "";
+}
+.html {
+  word-wrap: break-word;
+}
+
+@media (max-width: 500px) {
+  .html {
+    padding-left: 10px;
+    height: 50vh;
+    overflow: hidden;
+  }
+  .swrapper {
+    width: 300px;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  .div1 {
+    position: absolute;
+    left: 0%;
+  }
+}
