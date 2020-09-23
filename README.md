@@ -6,4 +6,7 @@
 - **canvas 画板**  
   使用 canvas 制作：https://huyiling1111.github.io/demo/canvans-demo1/index.html
 - **会动的八卦图**  
-  https://huyiling1111.github.io/demo/ball-1/index.html
+  https://huyiling1111.github.io/demo/ball-1/index.html 
+- **叫号取号**  
+  利用数据结构(队列)实现的叫号取号 https://huyiling1111.github.io/demo/createnumber/index.html
+  
