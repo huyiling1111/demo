@@ -1,0 +1,77 @@
+/* 常用基本标签重设 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body,
+div,
+p,
+a,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+em {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  border: 0;
+  /*vertical-align: middle;*/
+}
+li {
+  list-style: none;
+}
+label {
+  display: inline-block;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+form {
+  display: inline-block;
+  width: 100%;
+}
+input {
+  vertical-align: middle;
+  outline: 0;
+}
+textarea {
+  resize: none;
+  line-height: 20px;
+  overflow-y: auto;
+}
+
+:focus {
+  outline: 0;
+}
+.screen {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+div:first-child {
+  padding: 10px;
+}
+button {
+  margin: 8px 5px 3px 0px;
+}
