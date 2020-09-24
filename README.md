@@ -9,6 +9,6 @@
   https://huyiling1111.github.io/demo/ball-1/index.html 
 - **叫号取号**  
   利用数据结构(队列)实现的叫号取号 https://huyiling1111.github.io/demo/createnumber/index.html
- -**实现封装**  
+- **实现封装**  
   封装dom的库:https://huyiling1111.github.io/demo/dom/index.html
   
