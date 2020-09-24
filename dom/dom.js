@@ -1,6 +1,6 @@
 window.dom = {
-    find(selector) {
-        return document.querySelectorAll(selector)
+    find(selector,scope) {
+        return (document||scope).querySelectorAll(selector)
     },
     style(node, key, value) {
         node.style[key] = value
@@ -8,7 +8,7 @@ window.dom = {
     },
     each(nodes, fn) {
         for (let i = 0; i < nodes.length; i++) {
-            fn(nodes[i])
+            fn.call(null,nodes[i])
         }
     }
 }
