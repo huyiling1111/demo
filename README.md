@@ -11,4 +11,5 @@
   利用数据结构(队列)实现的叫号取号 https://huyiling1111.github.io/demo/createnumber/index.html
 - **实现封装**  
   封装dom的库:https://huyiling1111.github.io/demo/dom/index.html
+  jQuery封装dom的库:https://huyiling1111.github.io/demo/dom-2/index.html
   
