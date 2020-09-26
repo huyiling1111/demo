@@ -12,34 +12,51 @@ window.dom = {
         }
     },
     creat(string) {
+         //用template是因为这个标签里可以容纳所有标签，
+         //div标签里就不能放<tr></tr>标签，而template可以
         let container = document.createElement('template')
         container.innerHTML = string.trim()
         //用trim()去掉多余的空格
         return container.content.firstChild
         //一定要这样写container.content.firstChild
     },
-    after(node1, node2) {
-        node1.parentNode.insertBefore(node2, node1.nextSibling,)
-        //已有的子节点前插入一个新的子节点
+    after(node, newNode) {
+        // 目标是在Node节点后面插入node2节点
+        // 但是DOM只提供了insertBefore接口
+        // 1 -> 3
+        // 在1后面插入2, 等价于在3的前面插入2
+        // 所以我们转换为在node的下一个节点的前面插入node2
+        node.parentNode.insertBefore(newNode, node.nextSibling,)
+       
 
     },
-    before(node1, node2) {
-        node1.parentNode.insertBefore(node2, node1)
+    before(node, newNode) {
+        node.parentNode.insertBefore(newNode, node)
         //已有的子节点前插入一个新的子节点
     },
-    append(parent, child) {
-        parent.appendChild(child)
+    append(parent, node) {
+        parent.appendChild(node)
     },
-    swap(child, parent) {
-        dom.after.call(null, child, parent)
-        parent.appendChild(child)
-        return parent
+    swap(node, newParent) {
+         // 把Newparent 放到node前面
+        // 把node append到newparent里
+        // 目标: div1
+        //        ↓----> div2
+        // 变成  div1
+        //        ↓----> div3
+        //                ↓----> div2
+        // 先把div3 放到div2的前面，再div3.appendChild(div2)
+        node.before.call(null, node, newParent)
+        newParent.append(node)
     },
     remove(node) {
         node.parentNode.removeChild(node)
         return node
     },
-    empty(parent) {
+     // empty 把所有子节点删掉
+    // 坑：childNodes.length每次的Length会变化
+    empty(node) {
+        // const {childNodes} = node 等价于const childNodes = node.childNodes
         const array = []
         let x = node.firstChild
         while (x) {
